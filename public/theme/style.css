@@ -1,0 +1,626 @@
+/**
+Target: Prim'ENT
+Description: Default style theme of Prim'ENT
+Author: Joël Bauer
+Author Contact: jojaba@gmail.com
+**/
+
+/* Common styling */
+/* ****************************************************** */
+html, body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    min-height: 100vh;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #212121;
+}
+
+@font-face {
+    font-family: odyslexic;
+    src: url(font/OpenDyslexic-Regular.otf);
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    word-wrap : break-word;
+    hyphens: auto;
+  }
+
+h1, h2, h3, input[type=submit], button, .home-listing ul li a {
+    font-family : odyslexic;
+}
+
+.el-center {
+    text-align: center;
+}
+
+/* Site header */
+/* ****************************************************** */
+.status-bar {
+    padding: 0.5rem 1rem;
+    display:block;
+    font-size: 0.6rem;
+    line-height: 1rem;
+    background: whitesmoke;
+    text-align: right;
+}
+
+.status-bar a {
+    text-decoration: none;
+}
+
+@media (min-width: 860px) {
+    .status-bar {
+        text-align: right;
+    }
+
+    .top-header {
+        display: flex;
+        padding-bottom: 1rem;
+    }
+}
+
+@media (max-width: 859px) {
+    .status-bar {
+        text-align: center;
+    }
+
+    .top-header {
+        display: block;
+    }
+}
+
+/* Main title */
+
+.title {
+    text-align: center;
+    background:#212121;
+}
+
+.title h1 {
+    margin: 0;
+    padding: 0;
+    line-height: 2.4rem;
+}
+
+.title a {
+    text-decoration: none;
+    color: #FFF;   
+}
+
+.title p {
+    font-size: 0.6rem;
+    line-height: 0.6rem;
+    color: #FFF;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 860px) {
+    .title {
+        text-align: center;
+        margin: -1.5rem 0 -0.5rem -1rem;
+        padding: 2rem 1rem;
+        transform: rotate(-20deg);
+        border-radius: 30px;
+    }
+
+    .title h1 {
+        line-height: 2.4rem;
+    }
+
+    .title a {
+        font-size: 2.4rem;  
+    }
+}
+
+@media (max-width: 859px) {
+    .title {
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .title h1 {
+        line-height: 2.2rem;
+    }
+
+    .title a {
+        font-size: 2.2rem;  
+    }
+}
+
+/* Main menu */
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu li {
+    text-align: center;
+}
+
+.menu a {
+    margin: 0;
+    font-size: 1rem;
+    text-decoration: none;
+    font-variant: small-caps;
+    background: whitesmoke;
+    border-radius: 33px 33px 0 33px;
+    box-shadow: -2px 2px 2px #212121;
+}
+
+.menu .news a {
+    color: darkblue;  
+}
+
+.menu .howo a {
+    color: orangered;
+}
+
+.menu .talk a {
+    color: forestgreen;
+}
+
+.menu .reso a {
+    color: saddlebrown;
+}
+
+.menu li a:hover, .menu li a.active {
+    opacity: 1;
+}
+
+.menu .news a:hover, .menu .news a.active {
+    color: #FFF;
+    background: darkblue;
+}
+
+.menu .howo a:hover, .menu .howo a.active {
+    color: #FFF;
+    background: orangered;
+}
+
+.menu .talk a:hover, .menu .talk a.active {
+    color: #FFF;
+    background: forestgreen;
+}
+
+.menu .reso a:hover, .menu .reso a.active {
+    color: #FFF;
+    background: saddlebrown;
+}
+
+@media (min-width: 860px) {
+    .menu {
+        flex-grow: 2;
+    }
+
+    .menu ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+   
+    .menu li {
+        padding: 2.5rem 0 1rem 0;
+    }
+    
+    .menu .news, .menu .howo, .menu .talk {
+        margin: 0 -3.5rem 0 0;
+    }
+
+    .menu a {
+        display: inline-block;
+        opacity: 0.8;
+        width: 170px;
+        padding: 0.5rem 1rem;
+        border: 1px solid whitesmoke;
+        transform: rotate(60deg);
+        
+    }
+
+    .menu a:hover {
+        transform: rotate(60deg) scale(1.2);
+    }
+}
+
+@media (max-width: 859px) {
+    .menu ul {
+        display: grid;
+        padding: 0.5rem;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0.5rem;
+        row-gap: 0.5rem;
+    }   
+    .menu li {
+        padding: 0;
+    }
+
+    .menu a {
+        display: inline-block;
+        width: 100%;
+        padding: 1rem;   
+    }
+}
+
+/* Main part */
+/* ****************************************************** */
+
+main {
+    display: relative;
+    padding-bottom: 2rem;
+    white-space: pre-wrap; /*to preserve line-breaks*/
+}
+
+@media (min-width: 860px) {
+    main {
+        border-left: solid 5rem;
+    }
+    
+}
+
+@media (max-width: 859px) {
+    main {
+        border-left: solid 2rem;
+    }
+}
+
+/* home */
+
+.home-listing ul {
+    display: grid;
+    margin: 1rem;
+    padding: 0;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.home-listing ul li {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 200px;
+    justify-content: center;
+    align-items: center; 
+}
+
+.home-listing ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 200px;
+    text-align: center;
+    text-decoration: none;    
+    border-radius: 33px;
+    background: whitesmoke;
+    border: solid 4px whitesmoke;
+}
+
+.home-listing ul li a:hover {
+    color: #FFF;
+}
+
+.home-listing a.actu {
+    color: darkblue;
+    border-color: darkblue;
+}
+
+.home-listing a.actu:hover {
+    background: darkblue;
+}
+
+.home-listing a.howo  {
+    color: orangered;
+    border-color: orangered;
+}
+
+.home-listing a.howo:hover {
+    background: orangered;
+}
+
+.home-listing a.talk  {
+    color: forestgreen;
+    border-color: forestgreen;
+}
+
+.home-listing a.talk:hover {
+    background: forestgreen;
+}
+
+.home-listing a.reso  {
+    color: saddlebrown;
+    border-color: saddlebrown;
+}
+
+.home-listing a.reso:hover {
+    background: saddlebrown;
+}
+
+@media (min-width: 860px) {
+    .home-listing ul li a {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 859px) {
+    .home-listing ul li a {
+        font-size: 1.4rem;
+    }
+}
+
+/* News, Homeworks, Talking, Resources */
+
+.add-el {
+    position: fixed;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.add-el a {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background: rgb(33, 33, 33);
+    box-shadow: 2px 2px 2px #212121;
+    color: #FFF;
+    border-radius: 50% 50% 0 50%;
+}
+
+main.news-listing .add-el a {
+    background: darkblue;
+}
+
+main.homeworks-listing .add-el a {
+    background: orangered;
+}
+main.talks-listing .add-el a {
+    background: forestgreen;
+}
+
+main.resources-listing .add-el a {
+    background: saddlebrown;
+}
+
+.add-el a:hover {
+    background: #212121;
+    transform: translate(-1rem, -1rem) scale(1.2);
+}
+
+@media (min-width: 860px) {
+    .add-el a {
+        height: 4.5rem;
+        width: 4.5rem;
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+}
+
+@media (max-width: 859px) {
+    .add-el a {
+        height: 3.5rem;
+        width: 3.5rem;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+}
+
+.news-listing, .news-single {
+    border-color: darkblue;
+}
+
+.homeworks-listing, .homeworks-single {
+    border-color: orangered;
+}
+.talks-listing, .talks-single {
+    border-color: forestgreen;
+}
+
+.resources-listing, .resource-single {
+    border-color: saddlebrown;
+}
+
+main h2 {
+    margin: 0;
+    padding: 1rem;
+    background: whitesmoke;
+    text-align:center;
+}
+
+.news-listing h2, .news-listing .separator {
+    color: darkblue;
+}
+
+.homeworks-listing h2, .homeworks-listing .separator {
+    color: orangered;
+}
+
+.talks-listing h2, .talks-listing .separator {
+    color: forestgreen;
+}
+
+.resources-listing h2, .resources-listing .separator {
+   color: saddlebrown;
+}
+
+.news-listing article, .homeworks-listing article, .talks-listing article, .resources-listing article {
+    position: relative;
+    border: 1px dashed #212121;
+    padding: 1rem;
+    margin: 2rem 2rem 0 2rem;
+}
+
+article.awaiting, article.draft, article.unpublished {
+    opacity: 0.4;
+}
+
+main .el-content {
+
+}
+
+main h3 {
+    margin: 0;
+    padding: 0 0 1rem 0;
+    border-bottom: dashed 1px #212121
+}
+
+main h3 a {
+    text-decoration: none;
+}
+
+main .edit-link {
+    position: absolute;
+    top: -1.5rem;
+    left: 2rem;
+}
+
+main .edit-link a {
+    display: inline-block;
+    padding: 0.4rem 0.5rem;
+    margin: 0;
+    text-decoration: none;
+    color: #FFF;
+    background: #212121;
+    border-radius: 50% 50% 0 50%;
+}
+
+main .edit-link a {
+    background: whitesmoke;
+    color: #212121;
+}
+
+main .edit-link a:hover {
+    background:#212121;
+    color: whitesmoke;
+}
+
+main p, main ul {
+    margin: 0;
+    padding: 1rem;
+}
+
+main p.el-content {
+    background: whitesmoke;
+}
+
+main .el-infos {
+    border-top: #212121 1px dashed;
+    padding: 1rem 1rem 0 1rem;
+    margin: 0;
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+@media (min-width: 860px) {
+    main h3 {
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+    }
+
+    main h2 { 
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+}
+
+@media (max-width: 859px) {
+    main h3 {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+    }
+
+    main h2 { 
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+    }
+}
+
+
+/* Forms */
+
+main label {
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+}
+
+main input[type=text], main input[type=email], main input[type=password], main textarea {
+    padding: 0.5rem 1rem;
+    margin: 0;
+    border: whitesmoke 1px solid;
+    border-radius: 30px;
+    background: whitesmoke;
+    width: 100%;
+}
+
+main input, main textarea {
+    font-size: 1rem;
+    line-height: 1.1rem;
+    font-family:'Courier New', Courier, monospace;
+}
+
+main input:focus, main textarea:focus {
+    outline: none;
+    border-color: #212121;
+    background: #FFF;
+}
+
+main textarea {
+    height: 40%;
+}
+
+button {
+    padding: 0 0.5rem;
+    margin: 0;
+    border: whitesmoke 1px solid;
+    background: #212121;
+    color: #FFF;
+    border-radius: 30px;
+}
+
+button:hover {
+    cursor: pointer;
+    background: #FFF;
+    color: #212121
+}
+
+main button {
+    padding: 0.5rem 1rem;
+    width: 50%;
+}
+
+/* Footer */
+/* ****** */
+footer p {
+    margin: 0;
+    padding: 1rem;
+    background:whitesmoke;
+    font-size: 0.6rem;
+    line-height: 0.8rem;
+    text-align: center;
+}
+
+footer a {
+    display: inline-block;
+    padding: 0 0.5rem;
+    color: #212121;
+    background: whitesmoke;
+    border-radius: 30px; 
+}
+
+footer p a:hover {
+    transform: scale(1.2);
+}
