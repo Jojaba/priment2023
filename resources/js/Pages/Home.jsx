@@ -27,22 +27,22 @@ export default function Welcome(props) {
                     <ul>
                         <li>
                             <Link href={route('news')} className="actu">
-                                Actualités
+                                Découvrir les actualités
                             </Link>
                         </li>
                         <li>
                             <Link href={route('homeworks')} className="howo">
-                                Devoirs
+                                Rechercher les devoirs
                             </Link>
                         </li>
                         <li>
                             <Link href={route('talks')} className="talk">
-                                Discussions
+                                Consulter les discussions
                             </Link>
                         </li>
                         <li>
                             <Link href={route('resources')} className="reso">
-                                Ressources
+                                Prendre connaissnace des ressources
                             </Link>
                         </li>
                     </ul>

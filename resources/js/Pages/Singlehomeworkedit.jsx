@@ -46,7 +46,7 @@ export default function Singlehomeworkedit(props) {
                         <input required="required" id="date" type="text" value={data.date} onChange={e => setData('date', e.target.value)} />
                     </p>
                     <p>
-                        <label htmlFor="time">Horaire (hh:mm)</label><br />
+                        <label htmlFor="time">Horaire (hhHmm)</label><br />
                         <input required="required" id="time" type="text" value={data.time} onChange={e => setData('time', e.target.value)} />
                     </p>
                     <p>
